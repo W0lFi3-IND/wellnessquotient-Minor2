@@ -1,7 +1,4 @@
-package com.wolfie.checkingin;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.wolfie.checkingin.mainapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +12,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.wolfie.checkingin.R;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class login extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -46,7 +47,7 @@ void login()
                         // Sign in success, update UI with the signed-in user's information
                         Log.d("success", "signInWithEmail:success");
                         FirebaseUser user = mAuth.getCurrentUser();
-                        startActivity(new Intent(getApplicationContext(),Onboard.class));
+                        startActivity(new Intent(getApplicationContext(), Onboard.class));
                         finish();
 
                     } else {

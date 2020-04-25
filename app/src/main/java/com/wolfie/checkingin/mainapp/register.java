@@ -1,25 +1,19 @@
-package com.wolfie.checkingin;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.wolfie.checkingin.mainapp;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.wolfie.checkingin.R;
 
-import java.util.HashMap;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class register extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -49,7 +43,7 @@ public class register extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         // Sign in success, update UI with the signed-in user's information
                         Log.d("Success", "createUserWithEmail:success");
-                        startActivity( new Intent(getApplicationContext(),Onboard.class));
+                        startActivity( new Intent(getApplicationContext(), Onboard.class));
                         finish();
 
                         } else {

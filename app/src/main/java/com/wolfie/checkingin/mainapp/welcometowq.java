@@ -1,16 +1,19 @@
-package com.wolfie.checkingin;
+package com.wolfie.checkingin.mainapp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Handler;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.wolfie.checkingin.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class welcometowq extends AppCompatActivity {
 
@@ -38,7 +41,7 @@ public class welcometowq extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              Intent i = new Intent(getApplicationContext(),whatbringsyoutowq.class);
+              Intent i = new Intent(getApplicationContext(), whatbringsyoutowq.class);
               startActivity(i);
             }
         });

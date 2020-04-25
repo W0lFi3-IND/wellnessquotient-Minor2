@@ -1,18 +1,16 @@
-package com.wolfie.checkingin;
+package com.wolfie.checkingin.mainapp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import me.rorschach.library.ShaderSeekArc;
-
 import android.view.View;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
 import com.shawnlin.numberpicker.NumberPicker;
+import com.wolfie.checkingin.R;
 
+import androidx.appcompat.app.AppCompatActivity;
+import me.rorschach.library.ShaderSeekArc;
 
 
 public class BasicQues extends AppCompatActivity {

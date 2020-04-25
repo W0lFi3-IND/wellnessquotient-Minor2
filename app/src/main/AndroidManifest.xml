@@ -13,14 +13,14 @@
             android:name=".waterReminderMain"
             android:label="@string/title_activity_water_reminder_main"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Onboard" />
-        <activity android:name=".login" />
-        <activity android:name=".register" />
-        <activity android:name=".BasicQues" />
-        <activity android:name=".whatbringsyoutowq" />
-        <activity android:name=".welcometowq" />
-        <activity android:name=".whatsyourname" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".mainapp.Onboard" />
+        <activity android:name=".mainapp.login" />
+        <activity android:name=".mainapp.register" />
+        <activity android:name=".mainapp.BasicQues" />
+        <activity android:name=".mainapp.whatbringsyoutowq" />
+        <activity android:name=".mainapp.welcometowq" />
+        <activity android:name=".mainapp.whatsyourname" />
+        <activity android:name=".mainapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

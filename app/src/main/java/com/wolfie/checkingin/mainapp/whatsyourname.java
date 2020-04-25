@@ -1,9 +1,8 @@
-package com.wolfie.checkingin;
+package com.wolfie.checkingin.mainapp;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -11,6 +10,10 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.wolfie.checkingin.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class whatsyourname extends AppCompatActivity {
     EditText editText;
@@ -67,7 +70,7 @@ public class whatsyourname extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),welcometowq.class);
+                Intent i = new Intent(getApplicationContext(), welcometowq.class);
                 startActivity(i);
                 String name = editText.getText().toString();
                 SharedPreferences sharedPreferences = getSharedPreferences("Name_info",0);

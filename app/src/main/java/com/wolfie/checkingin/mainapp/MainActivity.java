@@ -1,11 +1,8 @@
-package com.wolfie.checkingin;
+package com.wolfie.checkingin.mainapp;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import androidx.core.content.ContextCompat;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
@@ -16,6 +13,11 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.wolfie.checkingin.R;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
        if(currentUser!=null)
        {
-           startActivity( new Intent(getApplicationContext(),Onboard.class));
+           startActivity( new Intent(getApplicationContext(), Onboard.class));
         finish();
     }
 }
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),whatsyourname.class);
+                Intent i = new Intent(getApplicationContext(), whatsyourname.class);
                 startActivity(i);
                 finish();
 
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
 public void loginpage(View view)
 {
-    startActivity(new Intent(getApplicationContext(),login.class));
+    startActivity(new Intent(getApplicationContext(), login.class));
 }
     }
 

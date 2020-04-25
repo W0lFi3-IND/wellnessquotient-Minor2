@@ -1,12 +1,15 @@
-package com.wolfie.checkingin;
+package com.wolfie.checkingin.mainapp;
 
 import android.content.Context;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.wolfie.checkingin.R;
+
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 public class ViewPagerAdapter extends PagerAdapter {
 
