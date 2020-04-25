@@ -44,7 +44,7 @@ void login()
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         // Sign in success, update UI with the signed-in user's information
-                        Log.d("sucess", "signInWithEmail:success");
+                        Log.d("success", "signInWithEmail:success");
                         FirebaseUser user = mAuth.getCurrentUser();
                         startActivity(new Intent(getApplicationContext(),Onboard.class));
                         finish();

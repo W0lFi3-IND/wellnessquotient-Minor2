@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
        if(currentUser!=null)
        {
            startActivity( new Intent(getApplicationContext(),Onboard.class));
-           finish();
-       }
+        finish();
     }
+}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
