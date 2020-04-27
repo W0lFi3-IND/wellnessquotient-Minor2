@@ -10,47 +10,47 @@
         android:id="@+id/dbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/buttonrounded"
         android:text="+"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/dbutton"
+        app:layout_constraintEnd_toEndOf="@+id/dbutton" />
 
     <EditText
         android:id="@+id/dinnertxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="11dp"
         android:backgroundTint="#FF00458B"
         android:ems="10"
-        android:inputType="text"
         android:hint="Food item"
+        android:inputType="text"
         android:textColor="#FF00458B"
         android:textColorHighlight="#FF00458B"
         android:textColorHint="#FBC02D"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/dcalories"
+        app:layout_constraintStart_toStartOf="@+id/dcalories" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="412dp"
+        android:layout_width="0dp"
 
         android:layout_height="484dp"
-        android:layout_marginBottom="128dp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/dinner"
-        app:layout_constraintTop_toBottomOf="@+id/dinner">
+        android:layout_marginTop="98dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ListView
             android:id="@+id/dlist"
             android:layout_width="wrap_content"
             android:layout_height="322dp"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:layout_marginTop="80dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="144dp"
             android:textColor="#FF00458B"
             android:textColorHighlight="#FF00458B"
@@ -63,11 +63,10 @@
             app:layout_constraintVertical_bias="0.171" />
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/dinner"
-        android:layout_width="416dp"
-        android:layout_height="98dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="#FF00458B"
         android:text="  Dinner"
         android:textAlignment="gravity"
@@ -77,8 +76,8 @@
         android:textColorLink="#FBC02D"
         android:textSize="36sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,12 +85,12 @@
         android:id="@+id/dcalories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="11dp"
         android:backgroundTint="#FF00458B"
         android:ems="10"
-        android:inputType="number"
         android:hint="Total calorie"
+        android:inputType="number"
         android:textColor="#FF00458B"
         android:textColorHighlight="#FF00458B"
         android:textColorHint="#FBC02D"
@@ -108,13 +107,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dcalories" />
+
     <TextView
         android:id="@+id/dcal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="11dp"
         android:text="               "
         android:textAlignment="gravity"
         android:textColor="#FBC02D"
@@ -123,14 +122,14 @@
         android:textColorLink="#FBC02D"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/dinner"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
         android:id="@+id/historydinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
+        android:layout_marginStart="19dp"
         android:text="History"
         android:textAlignment="gravity"
         android:textColor="#FBC02D"
