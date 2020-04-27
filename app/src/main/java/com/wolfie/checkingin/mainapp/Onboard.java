@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.wolfie.checkingin.R;
+import com.wolfie.checkingin.profile;
 import com.wolfie.checkingin.waterReminderMain;
 
 import java.util.HashMap;
@@ -54,5 +55,13 @@ FirebaseAuth mAuth;
 startActivity(new Intent(getApplicationContext(),waterReminderMain.class));
             }
         });
+
+        calorie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), profile.class));
+            }
+        });
     }
+
 }

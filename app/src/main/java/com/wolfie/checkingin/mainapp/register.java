@@ -16,7 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class register extends AppCompatActivity {
-    private FirebaseAuth mAuth;
+    public FirebaseAuth mAuth;
     EditText Email,Password;
 
     @Override

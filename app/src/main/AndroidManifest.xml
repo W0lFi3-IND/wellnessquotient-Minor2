@@ -9,10 +9,25 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".historysnacks"></activity>
+        <activity android:name=".historydinner" />
+        <activity android:name=".historylunch" />
+        <activity
+            android:name=".fragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".display"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".history"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".waterReminderMain"
             android:label="@string/title_activity_water_reminder_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".mainapp.Onboard" />
         <activity android:name=".mainapp.login" />
         <activity android:name=".mainapp.register" />
