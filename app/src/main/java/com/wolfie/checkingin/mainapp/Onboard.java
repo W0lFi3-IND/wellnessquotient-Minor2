@@ -50,6 +50,16 @@ FirebaseAuth mAuth;
         usermap.put("Height",Height.toString());
 
         mDatabaseReference.setValue(usermap);
+        //signout
+       findViewById(R.id.imageView5).setOnLongClickListener(new View.OnLongClickListener() {
+           @Override
+           public boolean onLongClick(View v) {
+               FirebaseAuth.getInstance().signOut();
+               startActivity(new Intent(Onboard.this,login.class));
+               return true;
+           }
+       });
+        //buttons
         findViewById(R.id.waterReminder).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,5 +80,7 @@ startActivity(new Intent(getApplicationContext(),waterReminderMain.class));
             }
         });
     }
+
+
 
 }
