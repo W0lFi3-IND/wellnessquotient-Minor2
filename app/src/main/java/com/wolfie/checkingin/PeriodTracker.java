@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Calendar;
+
 public class PeriodTracker extends AppCompatActivity {
     private String m_Text = "";
     private String p_Text = "";
@@ -73,5 +75,35 @@ public class PeriodTracker extends AppCompatActivity {
         if (periodlength.isEmpty()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Enter the period length");
+            // Set up the input
+            final EditText input = new EditText(this);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL);
+            builder.setView(input);
+
+// Set up the buttons
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Log.i("Hi","Hi");
+                    p_Text = input.getText().toString();
+                    Log.i("Hi", m_Text);
+                    editor.putString("periodlength", p_Text);
+                    editor.commit();
+                    periodlength = sharedPreferences.getString("periodlength", "");
+                }
+            });
+
+            builder.show();
+        }
+
+        save_day = sharedPreferences.getString("save_day", "");
+        save_month = sharedPreferences.getString("save_month", "");
+        save_year = sharedPreferences.getString("save_year", "");
+        Calendar calendar = Calendar.getInstance();
+        final int year = calendar.get(Calendar.YEAR);
+        final int month = calendar.get(Calendar.MONTH);
+        final int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+        Log.i("saveday", save_day);
     }
 }
