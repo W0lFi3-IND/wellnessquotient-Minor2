@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
@@ -53,5 +54,24 @@ public class PeriodTracker extends AppCompatActivity {
 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
             input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL);
             builder.setView(input);
+            // Set up the buttons
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Log.i("Hi","Hi");
+                    m_Text = input.getText().toString();
+                    Log.i("Hi", m_Text);
+                    editor.putString("cycledays", m_Text);
+                    editor.commit();
+                    cycledays = sharedPreferences.getString("cycledays", "");
+                }
+            });
+
+            builder.show();
+        }
+
+        if (periodlength.isEmpty()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Enter the period length");
     }
 }
