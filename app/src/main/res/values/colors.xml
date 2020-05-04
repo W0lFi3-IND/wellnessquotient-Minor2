@@ -3,4 +3,6 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00458B</color>
     <color name="colorAccent">#FFCB08</color>
+    <color name="abc">#B3FDFBFB</color>
+    <color name="period_starts">#800080</color>
 </resources>

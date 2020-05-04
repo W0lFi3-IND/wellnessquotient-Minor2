@@ -62,6 +62,12 @@ startActivity(new Intent(getApplicationContext(),waterReminderMain.class));
                 startActivity(new Intent(getApplicationContext(), profile.class));
             }
         });
+        period.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
     }
 
 }

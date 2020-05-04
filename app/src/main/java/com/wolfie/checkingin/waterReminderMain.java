@@ -173,13 +173,14 @@ mDatabaseReference.addValueEventListener(new ValueEventListener() {
                     list.add(XA);
                 }
                 Collections.sort(list);
-                float max = list.get(0);
-                float min = list.get(list.size()-1);
-                float ans = total/count;
-                tv2.setText(""+ans);
-                tv3.setText(""+min);
-                tv4.setText(""+max);
-
+                if(!list.isEmpty()) {
+                    float max = list.get(0);
+                    float min = list.get(list.size() - 1);
+                    float ans = total / count;
+                    tv2.setText("" + ans);
+                    tv3.setText("" + min);
+                    tv4.setText("" + max);
+                }
             }
 
             @Override
