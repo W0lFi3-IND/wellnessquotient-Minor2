@@ -12,7 +12,7 @@
         android:layout_width="190dp"
         android:layout_height="190dp"
         android:layout_marginTop="80dp"
-        android:background="@drawable/circle"
+        android:background="@drawable/circle1"
         android:gravity="center"
         android:text="Starts"
         android:textSize="40sp"
