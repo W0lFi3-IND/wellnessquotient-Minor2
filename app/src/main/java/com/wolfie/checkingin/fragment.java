@@ -17,6 +17,7 @@ public class fragment extends AppCompatActivity {
         setContentView(R.layout.activity_fragment);
 
         mPager = findViewById(R.id.vp);
+        mPager.setOffscreenPageLimit(NUM_PAGES);
         pagerAdapter = new PagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(pagerAdapter);
 
