@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -84,6 +85,16 @@ startActivity(new Intent(getApplicationContext(),waterReminderMain.class));
             @Override
             public void onClick(View v) {
               startActivity(  new Intent(Onboard.this, Feeling.class));
+            }
+        });
+        findViewById(R.id.imageView5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"LOG-OUT",Toast.LENGTH_LONG).show();
+                mAuth.signOut();
+                startActivity(new Intent(getApplicationContext(),login.class));
+                finish();
+
             }
         });
     }
