@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.wolfie.checkingin.Feeling;
 import com.wolfie.checkingin.PeriodTracker;
 import com.wolfie.checkingin.R;
 import com.wolfie.checkingin.profile;
@@ -77,6 +78,12 @@ startActivity(new Intent(getApplicationContext(),waterReminderMain.class));
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Onboard.this, PeriodTracker.class));
+            }
+        });
+        findViewById(R.id.mood).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              startActivity(  new Intent(Onboard.this, Feeling.class));
             }
         });
     }
